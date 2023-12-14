@@ -1,42 +1,52 @@
-body {
-    height: 100vh;
-    background-image: url(../img/pizza_back-1.webp);
+body{
+    background-image: url(../img/Background.svg);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
     padding: 32px 24px;
-    font-size: 'Roboto', sans-serif;
+    height: 110vh;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
-body::after {
-    position: absolute;
-    content: "";
-    display: block;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(242, 119, 6, 1) 100%);
-    inset: 0;
-    z-index: -1;
-}
-
-header {
+header{
     height: 150px;
 }
-
-main {
-    flex-grow: 1;
+main{
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: flex-end;
+    height: 60vh;
+    gap: 100px;
+}
+.conteudo-container{
+    color: var(--cor-texto);
+    width: 257px;
+}
+.conteudo-container h1{
+    width: 230px;
+}
+.conteudo-container p{
+    width: 310px;
 }
 
-.conteudo-container {
-    color: white;
-}
+@media(min-width:1024px){
+    body{
+        padding: 60px 0px;
+        align-items: center;
+        gap: 24px;
+    }
+    main{
+        height: 400px;
+        border: 2px dashed white;
+        padding: 20px;
+        border-radius: 12px;
+    }
+    .conteudo-container p{
+        width: 270px;
+    }
+   
 
-.conteudo-container h1 {
-    width: 250px;
-}
-
-.conteudo-container p {
-    width: 300px;
 }
